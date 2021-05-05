@@ -4,14 +4,14 @@ require_once("Manager.php");
 
 class Fonctionnalite extends Manager{
     //fonction sur la table fonctionnalite uniquement (select, insert...)
-    public function ajoutFonctionnalite(){
+    public function ajoutFonctionnalite($nomFonction, $nomScript){
         $db = $this->dbConnect();
-        if (isset($_POST['envoyer']) == true) {
+        
             $msg = "";
-            if (isset($_POST['nomFonction']) == false || trim($_POST['nomFonction']) == "") {
+            if (isset($nomFonction) == false || trim($nomFonction) == "") {
                 $msg = $msg . "Le nom de la fonction est obligatoire </br>";
             }
-            if (isset($_POST['nomScript']) == false || trim($_POST['nomScript']) == "") {
+            if (isset($nomScript) == false || trim($nomScript) == "") {
                 $msg = $msg . "Le nom du script est obligatoire </br>";
             }
             try {
@@ -19,8 +19,8 @@ class Fonctionnalite extends Manager{
                 $req = $db->prepare("insert into fonctionnalite values (0, :par_nomFonction, :par_nomScript);");
         
         
-                $req->bindValue(':par_nomFonction', $_POST['nomFonction'], PDO::PARAM_STR);
-                $req->bindValue(':par_nomScript', $_POST['nomScript'], PDO::PARAM_STR);
+                $req->bindValue(':par_nomFonction', $nomFonction, PDO::PARAM_STR);
+                $req->bindValue(':par_nomScript', $nomScript, PDO::PARAM_STR);
                 $req->execute();
         
         
@@ -35,7 +35,7 @@ class Fonctionnalite extends Manager{
                 die("BDIns01: erreur lors de l’ajout dans la table profil – script ajout_fonctionnalite.php
                             <br>Erreur :" . $e->getMessage());
             }
-        }
+        
         
 
 
