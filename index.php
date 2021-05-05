@@ -6,6 +6,10 @@ if(isset($_GET["action"])){
             require("controller/visiteStageController.php");
             listStage();
         break;
+        case "ajoutEntreprise":
+            require("controller/ajoutCaracEntreprise.php");
+            listStage();
+        break;
     }
 } else{
     //page d'accueil
