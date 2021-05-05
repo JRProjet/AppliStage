@@ -6,6 +6,11 @@ if(isset($_GET["action"])){
             require("controller/visiteStageController.php");
             listStage();
         break;
+
+        case "ajoutTechnologieStage":
+            require("controller/visiteStageController.php");
+            listStage();
+        break;
     }
 } else{
     //page d'accueil
