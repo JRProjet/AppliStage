@@ -6,6 +6,7 @@ if(isset($_GET["action"])){
             require("controller/visiteStageController.php");
             listStage();
         break;
+        case 'creation_user'
     }
 } else{
     //page d'accueil
