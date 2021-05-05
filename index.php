@@ -6,8 +6,11 @@ if(isset($_GET["action"])){
             require("controller/visiteStageController.php");
             listStage();
         break;
+        case 'ajoutPerm':
+            # code...
+            break;
     }
 } else{
     //page d'accueil
-    // a
+    //
 }
