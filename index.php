@@ -7,7 +7,7 @@ if(isset($_GET["action"])){
             listStage();
         break;
         case "ajoutEntreprise":
-            require("controller/ajoutEntreprise.php");
+            require("controller/entrepriseController.php");
             listStage();
         break;
     }
