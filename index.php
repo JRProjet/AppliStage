@@ -6,10 +6,9 @@ if(isset($_GET["action"])){
             require("controller/visiteStageController.php");
             listStage();
         break;
-        
-        case "listeConventionSigneRetourneEntreprise":
-            require("controller/listeConventionSigneRetourneEntrepriseController.php");
-            listeConventionSigneRetourneEntreprise();
+        case "listeConvSigneesRetournees":
+            require("controller/stageController.php");
+            listeConvSigneesRetournees();
         break;
     }
 } else{

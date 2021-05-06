@@ -4,9 +4,9 @@
 <?php ob_start() ?>
 
 <!-- code html de la page-->
-<?php foreach($stage AS $uneViste){
+<?php foreach($lesStages AS $une){
     //traitement
-    
+
 }?>
 
 
