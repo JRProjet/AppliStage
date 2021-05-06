@@ -1,11 +1,11 @@
 <!-- titre de la page (balise title) -->
-<?php $title = "Liste viste de stage"?>
+<?php $title = "Liste utilisateurs"?>
 
 <?php ob_start(); ?>
 
 <!-- code html de la page-->
-<?php foreach($visitesStages AS $uneViste){
-    //traitement
+<?php foreach($listeUtilisateur AS $unUtilisateur){
+    // TODO -> Tableau
 }?>
 
 
