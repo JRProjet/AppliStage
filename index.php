@@ -6,9 +6,10 @@ if(isset($_GET["action"])){
             require("controller/visiteStageController.php");
             listStage();
         break;
-        case "ajoutCaracteristiqueConventionStage":
-            require("controller/ajoutCaracteristiqueConventionStageController.php");
-            listStage();
+        
+        case "listeConventionSigneRetourneEntreprise":
+            require("controller/listeConventionSigneRetourneEntrepriseController.php");
+            listeConventionSigneRetourneEntreprise();
         break;
     }
 } else{
