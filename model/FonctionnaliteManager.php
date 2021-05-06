@@ -16,7 +16,7 @@ class Fonctionnalite extends Manager{
             }
             try {
                 
-                $req = $db->prepare("insert into fonctionnalite values (0, :par_nomFonction, :par_nomScript);");
+                $req = $dsn->prepare("insert into fonctionnalite values (0, :par_nomFonction, :par_nomScript);");
         
         
                 $req->bindValue(':par_nomFonction', $nomFonction, PDO::PARAM_STR);
