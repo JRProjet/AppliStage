@@ -6,3 +6,4 @@ function listStage(){
     $visitesSatges = $visiteManage->getVisiteStage();
     require("view/visiteStage/listeVisteStage.php");
 }
+

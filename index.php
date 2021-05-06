@@ -6,7 +6,11 @@ if(isset($_GET["action"])){
             require("controller/visiteStageController.php");
             listStage();
         break;
-        case 'creation_user'
+        case 'AjoutUtilisateur'
+            require("controller/AjoutUtilisateur.php");
+            ajoutUtilisateur($_POST);
+        break;
+        
     }
 } else{
     //page d'accueil
