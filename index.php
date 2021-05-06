@@ -5,9 +5,11 @@ if(isset($_GET["action"])){
         case "listeStage":
             require("controller/visiteStageController.php");
             listStage();
-        case "gestionConventionStage":
-            require("controller/gestionConventionStage.php");
-            listStage();
+        break;
+
+        case "ConvsNonSignees":
+            require("controller/stageController.php");
+            listConvsNonSignees();
         break;
     }
 } else{
