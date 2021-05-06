@@ -7,9 +7,9 @@ if(isset($_GET["action"])){
             listStage();
         break;
 
-        case "ajoutTechnologieStage":
-            require("controller/visiteStageController.php");
-            listStage();
+        case "listesSection":
+            require("controller/sectionController.php");
+            listesSection();
         break;
     }
 } else{
