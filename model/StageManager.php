@@ -8,8 +8,8 @@ class StageManager extends Manager{
         $db = $this->dbConnect();
         return $db->query("SELECT ... FROM stage WHERE ...");
     }
-    public function getConvSignees(){
+    public function getLesConvSignees(){
         $db = $this->dbConnect();
-        return $db->query("SELECT * FROM stage WHERE etat.libelle = "signee" join etat on etat.id = stage.id_etat");
+        return $db->query("SELECT * FROM stage WHERE etat.libelle = 'Signée' join etat on etat.id = stage.id_etat");
     }
 }
