@@ -8,7 +8,7 @@ if(isset($_GET["action"])){
         break;
         case "listeConvSignees":
             require("controller/stageController.php");
-            listeConvSignees();
+            getLesConvSignees();
         break;
         case "ajoutEntreprise":
             require("controller/entrepriseController.php");
