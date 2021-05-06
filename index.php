@@ -10,7 +10,7 @@ if(isset($_GET["action"])){
             require("controller/fonctionnaliteController.php");
             ajoutFonctionnaliteForm();
         break;
-        case "ajoutFonctionnalite" :
+        case "ajoutFonctionnaliteTrait" :
             require("controller/fonctionnaliteController.php");
             
             ajoutFonctionnaliteTrait($_POST['nomFonction'], $_POST['nomScript']);
