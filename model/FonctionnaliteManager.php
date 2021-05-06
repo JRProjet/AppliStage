@@ -35,10 +35,6 @@ class Fonctionnalite extends Manager{
                 die("BDIns01: erreur lors de l’ajout dans la table profil – script ajout_fonctionnalite.php
                             <br>Erreur :" . $e->getMessage());
             }
-        
-        
-
-
 
     }
 }
