@@ -9,6 +9,6 @@ function listStage(){
 
 function listConvSignees(){
     $stageManage = new StageManager();
-    $stage = $StageManage->getStage();
+    $stage = $StageManage->getConvSignees();
     require("view/stage/listeConvSignees.php");
 }

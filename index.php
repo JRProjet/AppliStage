@@ -7,7 +7,7 @@ if(isset($_GET["action"])){
             listStage();
         break;
         case "listeConvSignees":
-            require("controller/stageController.php");
+            require("controller/satgeController.php");
             listStage();
         break;
         case "ajoutEntreprise":
