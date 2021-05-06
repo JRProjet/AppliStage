@@ -4,6 +4,6 @@ $configDatabase = [
     'user'    => 'stsjr1615583',
     'pwd'     => '7r7pq3fn5y',
     'host'    => '91.216.107.183',
-    'port'    => '3307',
+    'port'    => '3306',
     'charset' => 'UTF8',
 ];
