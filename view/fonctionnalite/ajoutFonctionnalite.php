@@ -13,7 +13,11 @@
     include $_SERVER['DOCUMENT_ROOT'] . "/page/modele/modele_ajout_fonctionnalite.php";
     ?>
 
-
+    <div>
+    <h1>
+    Ajout d'une fonctionnalité
+    </h1>
+    </div>
     <div id="container">
         <form action="ajout_fonctionnalite.php" method="post">
             <label for="nomFonction">Nom de la fonctionnalité : </label>
