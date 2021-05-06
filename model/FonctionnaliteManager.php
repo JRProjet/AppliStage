@@ -16,7 +16,7 @@ class Fonctionnalite extends Manager{
             }
             try {
                 
-                $req = $dsn->prepare("insert into fonctionnalite values (0, :par_nomFonction, :par_nomScript);");
+                $req = $db->prepare("insert into fonctionnalite values (0, :par_nomFonction, :par_nomScript);");
         
         
                 $req->bindValue(':par_nomFonction', $nomFonction, PDO::PARAM_STR);
@@ -32,7 +32,7 @@ class Fonctionnalite extends Manager{
                                 </script> ';
                 }
             } catch (PDOException $e) {
-                die("BDIns01: erreur lors de l’ajout dans la table profil – script ajout_fonctionnalite.php
+                die("BDIns01: erreur lors de l’ajout dans la table fonctionnalite – script ajout_fonctionnalite.php
                             <br>Erreur :" . $e->getMessage());
             }
 

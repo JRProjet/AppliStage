@@ -4,7 +4,7 @@
 <?php  require_once('model/FonctionnaliteManager.php');  ?>
 <!-- code html de la page-->
 
-    //traitement
+    <!-- //traitement -->
 
 <div>
     <h1>
@@ -12,7 +12,7 @@
     </h1>
     </div>
     <div id="container">
-        <form action="index.php?action=ajoutFonctionnalite" method="post">
+        <form action="index.php?action=ajoutFonctionnaliteTrait" method="post">
             <label for="nomFonction">Nom de la fonctionnalité : </label>
             <br>
             <input type="text" name="nomFonction" id="nomFonction" required>
@@ -23,13 +23,13 @@
             <br>
             <br>
             <input type="submit" value="Envoyer" name="envoyer">
-            <?php if (isset($_POST['envoyer']) == true) {
+            <?php 
+            $msg = "";
+            if (isset($_POST['envoyer']) == true) {
                 echo $msg;
             }
 
-            if(isset($_POST['envoyer']) == true){
-                
-            }
+           
 
             ?>
         </form>

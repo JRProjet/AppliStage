@@ -12,11 +12,11 @@ if(isset($_GET["action"])){
         break;
         case "ajoutFonctionnalite" :
             require("controller/fonctionnaliteController.php");
-            var_dump ($_POST);
+            
             ajoutFonctionnaliteTrait($_POST['nomFonction'], $_POST['nomScript']);
         break;
     }
 } else{
     //page d'accueil
-    //
+
 }
