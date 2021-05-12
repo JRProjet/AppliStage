@@ -6,13 +6,9 @@ if(isset($_GET["action"])){
             require("controller/visiteStageController.php");
             listeStage();
         break;
-        case "listeConvSignees":
+        case "consultConvSignees":
             require("controller/stageController.php");
-            listeConvSignees();
-        break;
-        case "ajoutEntreprise":
-            require("controller/entrepriseController.php");
-            listStage();
+            consultConvSignees();
         break;
     }
 } else{
