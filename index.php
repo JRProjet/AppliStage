@@ -1,25 +1,25 @@
 <?php
 
-if(isset($_GET["action"])){
-    switch($_GET["action"]){
+if (isset($_GET["action"])) {
+    switch ($_GET["action"]) {
         case "listeStage":
             require("controller/visiteStageController.php");
             listStage();
-        break;
-        case "ajoutFonctionnaliteForm" :
+            break;
+        case "ajoutFonctionnaliteForm":
             require("controller/fonctionnaliteController.php");
-            ajoutFonctionnaliteForm();
-        break;
-        case "ajoutFonctionnaliteTrait" :
+            AjoutFonctionnaliteForm();
+            break;
+        case "ajoutFonctionnaliteTrait":
+
+            AjoutFonctionnaliteTrait($_POST['nomFonction'], $_POST['nomScript']);
+            break;
+        case "consultFonctionnalite":
             require("controller/fonctionnaliteController.php");
-            
-            ajoutFonctionnaliteTrait($_POST['nomFonction'], $_POST['nomScript']);
-        break;
-        case "consultFonctionalite" :
-            require("controller/fonctionnaliteController.php");
-            ConsultFonctionalite();
-        break;
+            ConsultFonctionnalite();
+            break;
+        default:
     }
-} else{
-    
+} else {
+    //sdkjdksjd
 }
