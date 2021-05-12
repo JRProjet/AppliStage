@@ -6,7 +6,7 @@
 <!-- code html de la page-->
 <?php foreach($lesStages AS $une){
     //traitement
-
+    
 }?>
 
 
