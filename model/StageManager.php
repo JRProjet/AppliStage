@@ -10,6 +10,6 @@ class StageManager extends Manager{
     }
     public function getLesConvSignees(){
         $db = $this->dbConnect();
-        return $db->query("SELECT * FROM stage JOIN etat ON etat.id = stage.id_etat WHERE etat.libelle = 'Signée'");
+        return $db->query("SELECT contenu, rue_lieu_stage, avis FROM stage JOIN etat ON etat.id = stage.id_etat WHERE etat.libelle = 'Signée'");
     }
 }
