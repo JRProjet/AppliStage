@@ -5,10 +5,10 @@
 
 <!-- code html de la page-->
 <?php foreach($listeUtilisateur AS $unUtilisateur){
-    // TODO -> Tableau
+    echo($unUtilisateur);
 }?>
 
 
 <!-- affichage de la page -->
 <?php $content = ob_get_clean();?>
-<?php require("view/template.php");?>
+<?php $_SERVER['DOCUMENT_ROOT']. 'view/template.php';?>

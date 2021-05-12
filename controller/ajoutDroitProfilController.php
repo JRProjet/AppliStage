@@ -1,6 +1,8 @@
 <?php
-function listeDroit() {
+require_once('model/DroitProfilManager.php');
+
+function ajoutDroit() {
     $droitManager = new DroitProfilManager();
     $droitProfil = $droitManager->getDroitProfil();
-    require("view/droitProfil/listeDroitProfil.php")
+    require("view/droitProfil/ajoutDroitProfilForm.php");
 }

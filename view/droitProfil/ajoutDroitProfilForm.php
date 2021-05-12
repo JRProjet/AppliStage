@@ -8,6 +8,7 @@
         <option value="choix2">Professeur</option>
     </select>
     <br>
+    <br>
     <label for="droits">droits</label> 
     <select name="droits[]" id="droits" multiple>
         <option value="choix1">Ajout</option>
@@ -15,8 +16,8 @@
         <option value="choix3">Supprimer</option>
     </select>
     <br>
+    <br>
     <input type="submit" name="Envoyer" value="Envoyer" /> 
 </form>
-
 <?php $content = ob_get_clean(); ?>
-<?php require("view/template.php"); ?>
+<?php $_SERVER['DOCUMENT_ROOT'].'view/template.php'; ?>

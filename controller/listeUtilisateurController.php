@@ -1,8 +1,8 @@
 <?php
-require_once('model/VisteStageManager.php');
+require_once('model/ListeUtilisateurManager.php');
 
 function listeUtilisateur(){
     $utilisateurManager = new ListeUtilisateurManager();
     $listeUtilisateur = $utilisateurManager->getListeUtilisateur();
-    require("view/visiteStage/listeUtilisateur.php");
+    require("view/utilisateur/listeUtilisateur.php");
 }

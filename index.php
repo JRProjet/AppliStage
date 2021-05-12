@@ -6,11 +6,13 @@ if(isset($_GET["action"])){
             require("controller/visiteStageController.php");
             listStage();
             break;
-        case 'ajoutDroitForm':
-            # code...
+        case 'listeUtilisateur':
+            require("controller/listeUtilisateurController.php");
+            listeUtilisateur();
             break;
-        case 'ajoutDroitTrait':
-            # code...
+        case 'ajoutDroit':
+            require("controller/ajoutDroitProfilController.php");
+            ajoutDroit();
             break;
     }
 } else{
