@@ -6,9 +6,9 @@
 <!-- code html de la page-->
 
 <?php echo "<table>";
-echo ("<tr><th>Jour</th><th>Contenu</th><th>Adresse</th><th>Avis</th></tr>");
+echo ("<tr><th>Contenu</th><th>Adresse</th><th>Avis</th></tr>");
 foreach($lesStages AS $uneConvSignees){
-        echo "<tr><td><strong>$uneConvSignees->jour</strong></td><td>$uneConvSignees->matindebut</td><td>$uneConvSignees->matinfin</td>";
+        echo "<tr><td><strong>$uneConvSignees->contenu</strong></td><td>$uneConvSignees->rue_lieu_stage</td><td>$uneConvSignees->avis</td>";
     }
     echo "</table>";
 ?>
