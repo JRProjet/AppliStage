@@ -4,7 +4,7 @@ ob_start();
 require_once('model/FonctionnaliteManager.php');
 ?>
 <section class="contact">
-    <h2>Consultation des fonctionnalité</h2>
+    <h2>Consultation des fonctionnalités</h2>
     <div class="sec">
 
         <table>
