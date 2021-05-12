@@ -4,7 +4,7 @@
 <?php ob_start() ?>
 
 <!-- code html de la page-->
-<?php foreach($ConvSignees AS $uneConvSignees){
+<?php foreach($lesStages AS $uneConvSignees){
     //traitement
 }?>
 
