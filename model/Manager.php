@@ -8,6 +8,9 @@ abstract class Manager{
 		require_once 'C:/wamp64\www/AppliStage/config/database.php';
 		$dsn = "mysql:host=".$configDatabaseDev['host'].";port=".$configDatabaseDev['port'].";dbname=".$configDatabaseDev['dbname'].";charset=".$configDatabaseDev['charset'];
 		$db = new PDO($dsn, $configDatabaseDev['user'], $configDatabaseDev['pwd']);
+		$bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+		// Activation des erreurs PDO
+		$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $db;
     }
 }
