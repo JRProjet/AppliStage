@@ -1,8 +1,9 @@
 <?php
 require_once('model/ConvsNonSigneesManager.php');
 
-function listConvsNonSignees(){
+function listeConvsNonSignees(){
     $convsNonSigneesManage = new ConvsNonSigneesManager();
     $lesConvsNonSignees = $convsNonSigneesManage->getLesConvsNonSignees();
-    require("view/stage/listeConvNonSignees.php");
+    VAR_DUMP($lesConvsNonSignees);
+    require("view/stage/listeConvsNonSignees.php");
 }

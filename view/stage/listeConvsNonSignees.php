@@ -22,7 +22,7 @@
                 Signées Conventions
             </th>
         </tr>';
-        foreach($lesConvsNonSignees AS $ConvsNonSignees){
+        foreach($lesConvsNonSignees as $ConvsNonSignees){
             echo "<strong><tr><td>$ConvsNonSignees->nom $ConvsNonSignees->prenom</td><td>$ConvsNonSignees->entreprise_nom</td></tr>";
         }
     }
