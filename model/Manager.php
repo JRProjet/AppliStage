@@ -11,6 +11,9 @@ abstract class Manager
 		try {
 			$dsn = "mysql:host=" . $configDatabaseDev['host'] . ";port=" . $configDatabaseDev['port'] . ";dbname=" . $configDatabaseDev['dbname'] . ";charset=" . $configDatabase['charset'];
 			$db = new PDO($dsn, $configDatabaseDev['user'], $configDatabaseDev['pwd']);
+			$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+			// Activation des erreurs PDO
+			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			return $db;
 		} catch (PDOEXCEPTION $err) {
 			die("BDAcc erreur de connexion à la base de données.<br>Erreur :" . $err->getMessage());

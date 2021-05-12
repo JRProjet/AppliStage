@@ -41,13 +41,13 @@ class Fonctionnalite extends Manager
     public function consultFonctionnalite()
     {
         $db = $this->dbConnect();
-
-
-        if ($db->query("select id, libelle, nom_script from fonctionnalite;")->rowCount() == 0) {
+        $consultFonction = $db->query("select id, libelle, nom_script from fonctionnalite;");
+        echo $consultFonction->rowCount();
+        if ($consultFonction->rowCount() == 0) {
             echo "Aucune valeur n'a été enregistré";
         } else {
 
-            return $db->query("select id, libelle, nom_script from fonctionnalite;");;
+            return $consultFonction;
         }
     }
 }

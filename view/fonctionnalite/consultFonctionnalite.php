@@ -13,10 +13,10 @@ require_once('model/FonctionnaliteManager.php');
                 <th scope="col">Script de la fonction</th>
             </tr>
             <?php
-            $lesEnregs = consultFonctionnalite();
 
-            foreach ($lesEnregs as $enreg) {
-                var_dump($lesEnregs);
+            var_dump($consultFonction);
+            foreach ($consultFonction as $enreg) {
+
                 echo "<tr>
                         <td>$enreg->libelle</td>
                         <td>$enreg->nom_script</td>
