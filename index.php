@@ -6,8 +6,16 @@ if(isset($_GET["action"])){
             require("controller/visiteStageController.php");
             listStage();
         break;
+        case "ajoutFonctionnaliteForm" :
+            require("controller/fonctionnaliteController.php");
+            ajoutFonctionnaliteForm();
+        break;
+        case "ajoutFonctionnaliteTrait" :
+            require("controller/fonctionnaliteController.php");
+            
+            ajoutFonctionnaliteTrait($_POST['nomFonction'], $_POST['nomScript']);
+        break;
     }
 } else{
-    //page d'accueil
-    // 
+    
 }
