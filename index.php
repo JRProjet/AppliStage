@@ -6,9 +6,13 @@ if(isset($_GET["action"])){
             require("controller/visiteStageController.php");
             listStage();
         break;
-        case "listeStage":
-            require("controller/ajoutTransport.php");
-            listStage();
+        case "ajoutmoyentransport":
+            require("controller/moyenTransportController.php");
+            ajoutMoyenTransport();
+        break;
+        case "ajoutmoyentransportform":
+            require("controller/moyenTransportController.php");
+            ajoutMoyenTransportForm();
         break;
     }
 } else{
