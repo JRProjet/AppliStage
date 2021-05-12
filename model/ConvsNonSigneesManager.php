@@ -6,6 +6,6 @@ class ConvsNonSiGNEESManager extends Manager{
     //fonction sur la table viste stage uniquement (select, insert...)
     public function getLesConvsNonSignees(){
         $db = $this->dbConnect();
-        return $db->query("SELECT nom, prenom, entreptise.nom FROM utilisateur JOIN entreprise");
+        return $db->query("SELECT id_etat FROM stage JOIN etat ON id_etat = etat.id WHERE etat.libelle = 'Conventions non signées'");
     }
 }
