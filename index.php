@@ -15,6 +15,10 @@ if(isset($_GET["action"])){
             
             ajoutFonctionnaliteTrait($_POST['nomFonction'], $_POST['nomScript']);
         break;
+        case "consultFonctionalite" :
+            require("controller/fonctionnaliteController.php");
+            ConsultFonctionalite();
+        break;
     }
 } else{
     

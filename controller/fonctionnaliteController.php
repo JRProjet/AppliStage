@@ -7,7 +7,8 @@ function AjoutFonctionnaliteTrait(){
     require("view/fonctionnalite/ajoutFonctionnalite.php");
 }
 function AjoutFonctionnaliteForm(){
-   
-    
     require("view/fonctionnalite/ajoutFonctionnalite.php");
+}
+function ConsultFonctionnalite(){
+    require("view/fonctionnalite/consultFonctionnalite.php");
 }
