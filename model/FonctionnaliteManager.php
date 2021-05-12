@@ -42,7 +42,7 @@ class Fonctionnalite extends Manager
     {
         $db = $this->dbConnect();
         $consultFonction = $db->query("select id, libelle, nom_script from fonctionnalite;");
-        echo $consultFonction->rowCount();
+
         if ($consultFonction->rowCount() == 0) {
             echo "Aucune valeur n'a été enregistré";
         } else {

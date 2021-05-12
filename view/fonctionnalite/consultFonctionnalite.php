@@ -13,8 +13,6 @@ require_once('model/FonctionnaliteManager.php');
                 <th scope="col">Script de la fonction</th>
             </tr>
             <?php
-
-            var_dump($consultFonction);
             foreach ($consultFonction as $enreg) {
 
                 echo "<tr>
