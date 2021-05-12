@@ -10,7 +10,7 @@ echo ("<tr><th>Jour</th><th>Contenu</th><th>Adresse</th><th>Avis</th></tr>");
         echo "<tr><td><strong>$uneConvSignees->jour</strong></td><td>$uneConvSignees->matindebut</td><td>$uneConvSignees->matinfin</td>";
     }
     echo "</table>";
-}?>
+?>
 
 
 <!-- affichage de la page -->
