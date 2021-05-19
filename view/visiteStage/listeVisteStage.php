@@ -4,9 +4,7 @@
 <?php ob_start() ?>
 
 <!-- code html de la page-->
-<?php foreach($visitesStages AS $uneViste){
-    //traitement
-}?>
+
 
 
 <!-- affichage de la page -->

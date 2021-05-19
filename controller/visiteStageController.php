@@ -1,8 +1,9 @@
 <?php
-require_once('model/VisteStageManager.php');
+require_once('model/visiteStageModel.php');
 
 function listStage(){
-    $visiteManage = new VisiteStageManager();
-    $visitesSatges = $visiteManage->getVisiteStage();
+    $visiteManage = new visiteStageModel();
+    $visitesSatges = $visiteManage->GetLesVisitesStages();
+    
     require("view/visiteStage/listeVisteStage.php");
 }
