@@ -9,6 +9,15 @@ function listeStage($idProfesseur){
 }
 
 function afficherFormulaireAjout($idProfesseur){
+    $lesDonnees = recuperationDonnnees();
+    require("view/visiteStage/ajoutVisiteStage.php");
+}
+
+function formulaireAjoutTraitement($idProfesseur){
+
+}
+
+function recuperationDonnnees(){
     $lesDonnees = array("date" => null, "heureDebut" => null, "heureFin"=> null, "etudiant"=> null, "professeur"=> null, "transport"=> null, "heureDepart"=> null, "heureRetour"=> null);
     if(count($_POST) > 0){
         if(isset($_POST["date"])){
@@ -36,9 +45,5 @@ function afficherFormulaireAjout($idProfesseur){
             $lesDonnees["heureRetour"] = $_POST["heureRetour"];
         }
     }
-    require("view/visiteStage/ajoutVisiteStage.php");
-}
-
-function formulaireAjoutTraitement($idProfesseur){
-
+    return $lesDonnees;
 }
