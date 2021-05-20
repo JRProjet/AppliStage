@@ -25,16 +25,18 @@
     <h3>Informations sur le stage</h3>
     <div>
         <label for="etudiant">Nom de l'étudiant : </label>
-        <select list="etudiantList" name="etudiant" required>
+        <input type="hidden" name="etudiant" id="etudiant-hidden">
+        <input list="etudiantList" id="etudiant" required>
         <datalist id="etudiantList">
-            <option value="0">Test</option>
+            <option data-value=0>Test</option>
         </datalist>
     </div>
     <div>
         <label for="professeur">Nom du professeur : </label>
-        <select list="professeurList" name="professeur" required>
+        <input type="hidden" name="professeur" id="professeur-hidden">
+        <input list="professeurList" id="professeur" required>
         <datalist id="professeurList">
-            <option value="0">Test</option>
+            <option data-value=0>Test</option>
         </datalist>
     </div>
 </div>
@@ -42,9 +44,10 @@
     <h3>Informations sur le transport</h3>
     <div>
         <label for="transport">Moyen de transport : </label>
-        <input list="transportList" name="transport">
+        <input type="hidden" name="transport" id="transport-hidden">
+        <input list="transportList" id="transport" required>
         <datalist id="transportList">
-            <option value="0">Test</option>
+            <option data-value=0>Test</option>
         </datalist>
     </div>
     <div>
@@ -57,6 +60,27 @@
     </div>
 </div>
 </form>
+
+<script>
+document.querySelector('input[list]').addEventListener('input', function(e) {
+    var input = e.target,
+        list = input.getAttribute('list'),
+        options = document.querySelectorAll('#' + list + ' option'),
+        hiddenInput = document.getElementById(input.getAttribute('id') + '-hidden'),
+        inputValue = input.value;
+
+    hiddenInput.value = inputValue;
+
+    for(var i = 0; i < options.length; i++) {
+        var option = options[i];
+
+        if(option.innerText === inputValue) {
+            hiddenInput.value = option.getAttribute('data-value');
+            break;
+        }
+    }
+});
+</script>
 
 <!-- affichage de la page -->
 <?php $content = ob_get_clean(); ?>
