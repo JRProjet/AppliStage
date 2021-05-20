@@ -7,3 +7,7 @@ function listeStage($idProfesseur){
     $lesVisitesStages = $visiteManage->GetLesVisitesStagesProfesseur($idProfesseur);
     require("view/visiteStage/listeVisteStage.php");
 }
+
+function afficherFormulaireAjout($idProfesseur){
+    
+}
