@@ -38,10 +38,24 @@
         </datalist>
     </div>
 </div>
-</form>
-
-
-
+<div>
+    <h3>Informations sur le transport</h3>
+    <div>
+        <label for="transport">Moyen de transport : </label>
+        <input list="transportList" name="transport">
+        <datalist id="transportList">
+            <option value="0">Test</option>
+        </datalist>
+    </div>
+    <div>
+        <label for="heureDepart">Heure de départ : </label>
+        <input name="heureDepart" type="time">
+    </div>
+    <div>
+        <label for="heureRetour">Heure de retour : </label>
+        <input name="heureRetour" type="time">
+    </div>
+</div>
 </form>
 
 <!-- affichage de la page -->
