@@ -1,9 +1,9 @@
 <?php
 require_once('model/visiteStageModel.php');
 
-function listStage(){
+function listeStage($idProfesseur){
+    setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
     $visiteManage = new visiteStageModel();
-    $visitesSatges = $visiteManage->GetLesVisitesStages();
-    
+    $lesVisitesStages = $visiteManage->GetLesVisitesStagesProfesseur($idProfesseur);
     require("view/visiteStage/listeVisteStage.php");
 }
