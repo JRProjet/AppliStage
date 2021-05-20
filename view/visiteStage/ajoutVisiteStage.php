@@ -21,6 +21,23 @@
         <input name="heureFin" type="time">
     </div>
 </div>
+<div>
+    <h3>Informations sur le stage</h3>
+    <div>
+        <label for="etudiant">Nom de l'étudiant : </label>
+        <select list="etudiantList" name="etudiant" required>
+        <datalist id="etudiantList">
+            <option value="0">Test</option>
+        </datalist>
+    </div>
+    <div>
+        <label for="professeur">Nom du professeur : </label>
+        <select list="professeurList" name="professeur" required>
+        <datalist id="professeurList">
+            <option value="0">Test</option>
+        </datalist>
+    </div>
+</div>
 </form>
 
 
