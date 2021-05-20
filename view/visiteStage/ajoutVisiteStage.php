@@ -10,22 +10,22 @@
         <h3>Date et heure de la visite</h3>
         <div>
             <label for="date">Date : </label>
-            <input name="date" type="date" required>
+            <input name="date" type="date" value="<?= $lesDonnees["date"];?>" required>
         </div>
         <div>
             <label for="heureDebut">Heure début de la visite : </label>
-            <input name="heureDebut" type="time">
+            <input name="heureDebut" type="time" value="<?= $lesDonnees["heureDebut"];?>">
         </div>
         <div>
             <label for="heureFin">Heure fin de la visite : </label>
-            <input name="heureFin" type="time">
+            <input name="heureFin" type="time"value="<?= $lesDonnees["heureFin"];?>">
         </div>
     </div>
     <div>
         <h3>Informations sur le stage</h3>
         <div>
             <label for="etudiant">Nom de l'étudiant : </label>
-            <input type="hidden" name="etudiant" id="etudiant-hidden">
+            <input type="hidden" name="etudiant" id="etudiant-hidden" value="<?= $lesDonnees["etudiant"];?>">
             <input list="etudiantList" id="etudiant" required>
             <datalist id="etudiantList">
                 <option data-value=0>Test</option>
@@ -33,7 +33,7 @@
         </div>
         <div>
             <label for="professeur">Nom du professeur : </label>
-            <input type="hidden" name="professeur" id="professeur-hidden">
+            <input type="hidden" name="professeur" id="professeur-hidden" value="<?= $lesDonnees["professeur"];?>">
             <input list="professeurList" id="professeur" required>
             <datalist id="professeurList">
                 <option data-value=0>Test</option>
@@ -44,7 +44,7 @@
         <h3>Informations sur le transport</h3>
         <div>
             <label for="transport">Moyen de transport : </label>
-            <input type="hidden" name="transport" id="transport-hidden">
+            <input type="hidden" name="transport" id="transport-hidden" value="<?= $lesDonnees["transport"];?>">
             <input list="transportList" id="transport" required>
             <datalist id="transportList">
                 <option data-value=0>Test</option>
@@ -52,11 +52,11 @@
         </div>
         <div>
             <label for="heureDepart">Heure de départ : </label>
-            <input name="heureDepart" type="time">
+            <input name="heureDepart" type="time" value="<?= $lesDonnees["heureDepart"];?>">
         </div>
         <div>
             <label for="heureRetour">Heure de retour : </label>
-            <input name="heureRetour" type="time">
+            <input name="heureRetour" type="time" value="<?= $lesDonnees["heureRetour"];?>">
         </div>
     </div>
     <div>
