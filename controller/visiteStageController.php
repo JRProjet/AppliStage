@@ -9,5 +9,5 @@ function listeStage($idProfesseur){
 }
 
 function afficherFormulaireAjout($idProfesseur){
-    
+    require("view/visiteStage/ajoutVisiteStage.php");
 }
