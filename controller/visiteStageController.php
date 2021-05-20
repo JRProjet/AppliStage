@@ -36,7 +36,9 @@ function afficherFormulaireAjout($idProfesseur){
             $lesDonnees["heureRetour"] = $_POST["heureRetour"];
         }
     }
-
-
     require("view/visiteStage/ajoutVisiteStage.php");
+}
+
+function formulaireAjoutTraitement($idProfesseur){
+
 }

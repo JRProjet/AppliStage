@@ -10,6 +10,10 @@ if (isset($_GET["action"])) {
             require("controller/visiteStageController.php");
             afficherFormulaireAjout(2);
             break;
+        case "ajoutVisiteStageTrait":
+            require("controller/visiteStageController.php");
+            formulaireAjoutTraitement(2);
+            break;
         default;
     }
 } else {
