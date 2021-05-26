@@ -5,13 +5,16 @@
 <h2>Consultation des entreprises par technologie</h2>
 <!-- code html de la page-->
 <?php foreach($lesEntreprisesTechnologie AS $uneEntreprise){
-    echo 'Ville :';
-    echo $uneEntreprise->nom ;
-    echo'<br/>';
-    echo $uneEntreprise->rue ;
+    echo "Adresse de l'entreprise : <br/>";
+    echo $uneEntreprise->rue;
     echo '<br/>';
-    echo $uneEntreprise->entreprise.nom;  
-
+    echo $uneEntreprise->codepostal;
+    echo ', ';
+    echo $uneEntreprise->ville;
+    echo '<br/>';
+    echo $uneEntreprise->entreprise;  
+    echo'<br/> technologie utilisé : ';
+    echo $uneEntreprise->techno;
 }?>
 
 
