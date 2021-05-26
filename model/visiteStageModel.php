@@ -7,7 +7,9 @@ class visiteStageModel extends Manager{
     public function GetLesVisitesStagesProfesseur($idProfesseur){
         $db = $this->dbConnect();
         return $db->query("
-        SELECT vs.date_visite, vs.heure_debut_visite AS heure_visite, s.rue_lieu_stage AS rue_stage, v.nom AS ville_stage, v.code_postal AS code_postal_stage, t.nom AS nom_tuteur, t.prenom AS prenom_tuteur, t.telephone AS telephone_tuteur, t.mel AS mel_tuteur, e.nom AS nom_entreprise, u.nom AS nom_etudiant, u.prenom AS prenom_etudiant, u.telephone AS telephone_etudiant, u.mel AS mel_etudiant
+        SELECT vs.date_visite, vs.heure_debut_visite AS heure_visite, s.rue_lieu_stage AS rue_stage, v.nom AS ville_stage, v.code_postal AS code_postal_stage, t.nom AS nom_tuteur, 
+        t.prenom AS prenom_tuteur, t.telephone AS telephone_tuteur, t.mel AS mel_tuteur,  e.nom AS nom_entreprise, u.nom AS nom_etudiant, u.prenom AS prenom_etudiant, 
+        u.telephone AS telephone_etudiant, u.mel AS mel_etudiant
         FROM visite_stage AS vs
         JOIN stage AS s ON vs.id_stage = s.id
         JOIN ville AS v ON s.id_numero_insee = v.numero_insee

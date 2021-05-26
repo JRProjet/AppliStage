@@ -10,31 +10,31 @@
         <h3>Date et heure de la visite</h3>
         <div>
             <label for="date">Date : </label>
-            <input name="date" type="date" value="<?= $lesDonnees["date"];?>" required>
+            <input name="date" type="date" value="<?= $lesDonnees["date"]; ?>" required>
         </div>
         <div>
             <label for="heureDebut">Heure début de la visite : </label>
-            <input name="heureDebut" type="time" value="<?= $lesDonnees["heureDebut"];?>">
+            <input name="heureDebut" type="time" value="<?= $lesDonnees["heureDebut"]; ?>">
         </div>
         <div>
             <label for="heureFin">Heure fin de la visite : </label>
-            <input name="heureFin" type="time"value="<?= $lesDonnees["heureFin"];?>">
+            <input name="heureFin" type="time" value="<?= $lesDonnees["heureFin"]; ?>">
         </div>
     </div>
     <div>
         <h3>Informations sur le stage</h3>
         <div>
             <label for="etudiant">Nom de l'étudiant : </label>
-            <input type="hidden" name="etudiant" id="etudiant-hidden" value="<?= $lesDonnees["etudiant"];?>">
-            <input list="etudiantList" id="etudiant" required>
+            <input type="hidden" name="etudiant" id="etudiant-hidden" value="<?= $lesDonnees["etudiant"]; ?>">
+            <input list="etudiantList" id="etudiant" value="<?= $lesDonnees["etudiant"]; ?>" required>
             <datalist id="etudiantList">
                 <option data-value=0>Test</option>
             </datalist>
         </div>
         <div>
             <label for="professeur">Nom du professeur : </label>
-            <input type="hidden" name="professeur" id="professeur-hidden" value="<?= $lesDonnees["professeur"];?>">
-            <input list="professeurList" id="professeur" required>
+            <input type="hidden" name="professeur" id="professeur-hidden" value="<?= $lesDonnees["professeur"]; ?>">
+            <input list="professeurList" id="professeur" value="<?= $lesDonnees["professeur"]; ?>" required>
             <datalist id="professeurList">
                 <option data-value=0>Test</option>
             </datalist>
@@ -44,34 +44,36 @@
         <h3>Informations sur le transport</h3>
         <div>
             <label for="transport">Moyen de transport : </label>
-            <input type="hidden" name="transport" id="transport-hidden" value="<?= $lesDonnees["transport"];?>">
-            <input list="transportList" id="transport" required>
+            <input type="hidden" name="transport" id="transport-hidden" value="<?= $lesDonnees["transport"]; ?>">
+            <input list="transportList" id="transport" value="<?= $lesDonnees["transport"]; ?>">
             <datalist id="transportList">
                 <option data-value=0>Test</option>
             </datalist>
         </div>
         <div>
             <label for="heureDepart">Heure de départ : </label>
-            <input name="heureDepart" type="time" value="<?= $lesDonnees["heureDepart"];?>">
+            <input name="heureDepart" type="time" value="<?= $lesDonnees["heureDepart"]; ?>">
         </div>
         <div>
             <label for="heureRetour">Heure de retour : </label>
-            <input name="heureRetour" type="time" value="<?= $lesDonnees["heureRetour"];?>">
+            <input name="heureRetour" type="time" value="<?= $lesDonnees["heureRetour"]; ?>">
         </div>
     </div>
     <div>
         <button type="submit">Ajouter la visite</button>
+        <br>
+        <?php echo $lesDonnees["message"];?>
     </div>
 </form>
 
 <script>
-    document.querySelector('input[list]').addEventListener('input', function(e) {
+    document.querySelectorAll('input[list]').forEach(element => element.addEventListener('input', function(e) {
+        console.log("test");
         var input = e.target,
             list = input.getAttribute('list'),
             options = document.querySelectorAll('#' + list + ' option'),
             hiddenInput = document.getElementById(input.getAttribute('id') + '-hidden'),
             inputValue = input.value;
-
         hiddenInput.value = inputValue;
 
         for (var i = 0; i < options.length; i++) {
@@ -82,7 +84,21 @@
                 break;
             }
         }
-    });
+    }));
+    window.onload = function() {
+        document.querySelectorAll('input[list]').forEach(function(input) {
+            var inputValue = input.value,
+                options = document.querySelectorAll('#' + input.getAttribute('list') + ' option');
+
+            document.getElementById(input.getAttribute('id') + '-hidden').value = inputValue;
+            for (var i = 0; i < options.length; i++) {
+                if (inputValue == options[i].getAttribute('data-value')) {
+                    input.value = options[i].innerHTML;
+                    break;
+                }
+            }
+        });
+    };
 </script>
 
 <!-- affichage de la page -->
