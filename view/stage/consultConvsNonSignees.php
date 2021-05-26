@@ -4,21 +4,29 @@
 
 <?php ob_start() ?>
 <!-- code html de la page-->
-<h1>Les Conventions de stages qui ne sont pas signées</h1>
+<h1>Conventions de stages non signées</h1>
 <?php 
     echo '<table>
+    <h2>Liste conventions non-signées</h2>
     <tr>
         <th>Elève</th>
+        <th>Section</th>
+        <th>Prof</th>
+        <th>Tuteur</th>
         <th>Entreprise</th>
-        <th>Etat</th>
+        <th>Ville Stage</th>
+        <th>Signée Convention</th>
     </tr>';
 
 foreach($lesConvsNonSignees as $convsNonSignees){
     //traitement
         //on lit le tableau retourné et pour chaque enregistrement, on affiche le nom et la description
     echo "<strong><tr><td>$convsNonSignees->nom $convsNonSignees->prenom</td>
+    <td>$convsNonSignees->nomSection</td>
+    <td>$convsNonSignees->nomProf $convsNonSignees->prenomProf</td>
+    <td>$convsNonSignees->nomTuteur $convsNonSignees->prenomTuteur</td>
     <td>$convsNonSignees->nomEntreprise</td>
-    <td>$convsNonSignees->libelleEtat</td></tr>";
+    <td>$convsNonSignees->nomVille</td></tr>";
 }
 echo '</table>';
 ?>

@@ -8,13 +8,14 @@ h1{
 	margin-top: 40px;
  	font-weight: normal;
 	text-align: center;
-	color: rgb(150, 26, 26);
+	color: rgb(0, 0, 0);
 }
 h2{
-	margin-top: 20px;
+	height: 20px;
+	font-size: 15px;
  	font-weight: normal;
 	text-align: center;
-	color: rgb(0, 17, 255);
+	color: rgb(0, 0, 0);
 	
 }
 
@@ -134,7 +135,7 @@ td, th {
   }
   
   tr:nth-child(even) td {
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(172, 172, 172);
   }
   
   tr:nth-child(odd) td {
