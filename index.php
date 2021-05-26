@@ -9,7 +9,7 @@ if(isset($_GET["action"])){
 
         case "listesSection":
             require("controller/sectionController.php");
-            listesSection();
+            listesSections();
         break;
     }
 } else{
