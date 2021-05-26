@@ -1,5 +1,6 @@
 <!-- titre de la page (balise title) -->
 <?php $title = "Liste des conventions non signées"?>
+<link rel="stylesheet" href="public/css/style.css">
 
 <?php ob_start() ?>
 <!-- code html de la page-->

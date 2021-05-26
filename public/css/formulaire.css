@@ -1,0 +1,91 @@
+/* début de la partie CSS pour les formulaires */
+/* --------------------------------------------*/
+/* div qui contient un formulaire */
+#container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+  }
+  
+  /* formulaire*/
+  form {
+    width:80%;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.2);
+    color: rgb(0, 17, 255);
+  }
+  
+  /* titre h1 dans un container */
+  #container h1 {
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+  
+  /* composant input text ou input mail ou input text ou input password */
+  input[type='text'],
+  input[type='mail'],
+  input[type='tel'],
+  input[type='password'],
+  textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid rgb(99, 98, 98);
+    box-sizing: border-box;
+  }
+  
+  /* composant input date ou select */
+  input[type='date'],
+  select {
+    padding: 12px 2px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* composant input checkbox */
+  input[type='checkbox'] {
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  /* label */
+  label {
+    color: rgb(0, 0, 0);
+  }
+  .radio-group {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  /* pour avoir un label et un champ sur la même ligne */
+  .form-group {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* bouton de type submit */
+  input[type='submit'] {
+    background-color: #53af57;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* changement d'aspect si la souris passe sur un bouton de type submit */
+  input[type='submit']:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+  }
+  /* fin de la partie CSS pour les formulaires */
+  /* --------------------------------------------*/
