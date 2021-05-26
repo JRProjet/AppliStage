@@ -6,24 +6,21 @@
 <h1>Convention</h1>
     <p>Liste des conventions signées et retournées à l'entreprise</p>
     <table>
-        <tr><th>Eleve</th>
-        <th>Section</th>
-        <th>Entreprise</th></tr> 
-    </table>
+        <tr>
+            <th>Eleve</th>
+            <th>Section</th>
+            <th>Entreprise</th>
+        </tr> 
+
 <!-- code html de la page-->
 
 <?php 
     var_dump ($lesStages);
     foreach($lesStages AS $unStage){
-    echo "<tr><td>$unStage->nom $unStage->prenom</td></tr>";  
+        echo "<tr><td>$unStage->nom $unStage->prenom</td></tr>";  
     //traitement
 }?>
-    //foreach ($lesStages as $iuneConv) {
-        //traitement
-        // echo "<tr><td>$uneConventionSigneRetourne->nom $uneConventionSigneRetourne->prenom</td></tr>";                 
-    //}
-?>
-
+        </table>
 <!-- affichage de la page -->
 <?php $content = ob_get_clean();?>
 <?php require("view/template.php")?>
