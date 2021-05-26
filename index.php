@@ -6,7 +6,7 @@ if(isset($_GET["action"])){
             require("controller/visiteStageController.php");
             listStage();
         break;
-        case "ajoutmoyentransport":
+        case "ajoutmoyentransportTrait":
             require("controller/moyenTransportController.php");
             ajoutMoyenTransport();
         break;

@@ -4,12 +4,12 @@
 <?php ob_start() ?>
 
 <!-- code html de la page-->
-<?php
-<form action="action.php" method="post">
-<p>Le nouveau moyen de trasport : <transport="moyen de transport" /></p>
-</form>
+
+<form action='http://applistage2/index.php?action=ajoutmoyentransportTrait' method='post'>
+<p>Le nouveau moyen de trasport : <input name='transport' type = 'text'required></p>
 <input type ='submit' name='valider' id='valider' value='Envoyer'/>
-?>
+</form>
+
 
 
 <!-- affichage de la page -->

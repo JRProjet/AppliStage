@@ -1,7 +1,7 @@
 <?php
 require_once('model/MoyenTransport.php');
 
-function ajoutMoyenTransport(){
+function ajoutMoyenTransportTrait(){
     $unMoyenTransport = new MoyenTransport();
     $nbEnreg = $unMoyenTransport->ajoutMoyenTransport();
     require("view/moyenTransport/ajoutMoyenTransportMes.php");
