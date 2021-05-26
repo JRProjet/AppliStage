@@ -7,7 +7,7 @@ if(isset($_GET["action"])){
             listStage();
         break;
         case 'creation_user'
-    }
+    
 } else{
     //page d'accueil
     // 
