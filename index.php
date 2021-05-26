@@ -1,7 +1,7 @@
 <?php
 
-if(isset($_GET["action"])){
-    switch($_GET["action"]){
+if (isset($_GET["action"])) {
+    switch ($_GET["action"]) {
         case "listeStage":
             require("controller/visiteStageController.php");
             listStage();
@@ -11,7 +11,7 @@ if(isset($_GET["action"])){
             consultEntreprise();
         break;
     }
-} else{
+} else {
     //page d'accueil
     // 
 }
