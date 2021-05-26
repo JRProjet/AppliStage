@@ -10,6 +10,10 @@ class StageManager extends Manager{
     }
     public function getLesStagesConvSigneRetourne(){
         $db = $this->dbConnect();
-        return $db->query("SELECT * FROM stage join etat on etat.id = stage.id_etat WHERE etat.libelle = 'Renvoyée' ");
+        return $db->query("SELECT utilisateur.nom AS nom, utilisateur.prenom AS prenom FROM stage 
+        JOIN etat on etat.id = stage.id_etat 
+        JOIN utilisateur ON utilisateur.id = stage.id_etudiant
+        WHERE etat.libelle = 'Renvoyée' ");
     }
+
 }
