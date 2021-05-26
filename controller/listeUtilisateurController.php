@@ -3,6 +3,6 @@ require_once('model/ListeUtilisateurManager.php');
 
 function listeUtilisateur(){
     $utilisateurManager = new ListeUtilisateurManager();
-    $listeUtilisateur = $utilisateurManager->getListeUtilisateur();
+    $lesUtilisateurs = $utilisateurManager->getLesUtilisateurs();
     require("view/utilisateur/listeUtilisateur.php");
 }

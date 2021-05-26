@@ -20,4 +20,4 @@
     <input type="submit" name="Envoyer" value="Envoyer" /> 
 </form>
 <?php $content = ob_get_clean(); ?>
-<?php $_SERVER['DOCUMENT_ROOT'].'view/template.php'; ?>
+<?php require('C:/wamp64/www/AppliStage/view/template.php'); ?>

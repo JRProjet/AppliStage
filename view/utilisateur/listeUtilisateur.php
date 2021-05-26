@@ -4,11 +4,20 @@
 <?php ob_start(); ?>
 
 <!-- code html de la page-->
-<?php foreach($listeUtilisateur AS $unUtilisateur){
-    echo($unUtilisateur);
-}?>
+<table>
+    <th>Nom</th>
+	<th>Prénom</th>
+	<th>Téléphone</th>
+    <?php
+	foreach($lesUtilisateurs as $unUtilisateur) {
+        echo("<tr><td>$unUtilisateur->nom</td><td>$unUtilisateur->prenom</td><td>$unUtilisateur->telephone</td></tr>");
+	}
+    ?>
+</table>
+
+
 
 
 <!-- affichage de la page -->
 <?php $content = ob_get_clean();?>
-<?php $_SERVER['DOCUMENT_ROOT']. 'view/template.php';?>
+<?php require('C:/wamp64/www/AppliStage/view/template.php'); ?>

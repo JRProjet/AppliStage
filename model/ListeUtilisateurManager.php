@@ -4,8 +4,12 @@ require_once("Manager.php");
 
 class ListeUtilisateurManager extends Manager{
     //fonction sur la table utilisateur uniquement (select, insert...).
-    public function getListeUtilisateur(){
+    public function getLesUtilisateurs(){
         $db = $this->dbConnect();
-        return $db->query("SELECT nom, prenom FROM utilisateur WHERE ...");
+        $lesUtilisateurs = $db->query("SELECT nom, prenom, telephone FROM utlisateur");
+        if ($lesUtilisateurs->rowCount() == 0) {
+            echo("Aucune données entré.");
+        }
+        return $lesUtilisateurs;
     }
 }

@@ -5,4 +5,5 @@ function ajoutDroit() {
     $droitManager = new DroitProfilManager();
     $droitProfil = $droitManager->getDroitProfil();
     require("view/droitProfil/ajoutDroitProfilForm.php");
+    require("view/droitProfil/ajoutDroitTrait.php");
 }
