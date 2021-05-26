@@ -8,9 +8,10 @@
     <th>Nom</th>
 	<th>Prénom</th>
 	<th>Téléphone</th>
+    <th>Mail</th>
     <?php
 	foreach($lesUtilisateurs as $unUtilisateur) {
-        echo("<tr><td>$unUtilisateur->nom</td><td>$unUtilisateur->prenom</td><td>$unUtilisateur->telephone</td></tr>");
+        echo("<tr><td>$unUtilisateur->nom</td><td>$unUtilisateur->prenom</td><td>$unUtilisateur->telephone</td><td>$unUtilisateur->mel</td></tr>");
 	}
     ?>
 </table>

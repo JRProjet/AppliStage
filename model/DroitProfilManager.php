@@ -5,7 +5,7 @@ class DroitProfilManager extends Manager {
         $db = $this->dbConnect();
 
         try{
-            $droitProfil = $db->query("INSERT INTO id_fonctionnalite VALUES(0, :par_fonctionnalite, :par_profil)");
+            $req = $db->query("INSERT INTO droit_profil VALUES(0, :par_fonctionnalite, :par_profil)");
         
             $req->bindValue(':par_fonctionnalite', $_POST['droits'], PDO::PARAM_INT);
             $req->bindValue(':par_profil', $_POST['profils'], PDO::PARAM_INT);

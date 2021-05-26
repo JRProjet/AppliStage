@@ -10,12 +10,19 @@ if(isset($_GET["action"])){
             require("controller/listeUtilisateurController.php");
             listeUtilisateur();
             break;
-        case 'ajoutDroit':
-            require("controller/ajoutDroitProfilController.php");
-            ajoutDroit();
+        case 'ajoutDroitProfilForm':
+            require("controller/DroitProfilController.php");
+
+            ajoutDroitForm();
             break;
-    }
-} else{
+        case 'ajoutDroitProfilTrait':
+            require("controller/DroitProfilController.php");    
+            ajoutDroitTrait($_POST['id_fonctionnalite']);
+            break;
+        
+        }
+    } else {
+
     //page d'accueil
     //
 }

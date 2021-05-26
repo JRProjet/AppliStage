@@ -1,12 +1,16 @@
 <?php $title = "Ajout droit profil"?>
 <?php ob_start(); ?>
+<?php require $_SERVER['DOCUMENT_ROOT'].'/applistage/model/ProfilManager.php'; ?>
 
 <form action="index.php?action=ajoutDroitTrait.php" method="POST">
     <label for="profils">profils</label> 
-    <select name="profils" id="profils">
-        <option value="choix1">Etudiant</option>
-        <option value="choix2">Professeur</option>
-    </select>
+    <?php
+        echo("<select name='profils' id='profils'>");
+        foreach ($lesProfils as $unProfil) {
+            echo("<option value='$unProfil->id'> $unProfil->libelle</option>");
+        }
+        echo("</select>");
+    ?>
     <br>
     <br>
     <label for="droits">droits</label> 
@@ -19,5 +23,8 @@
     <br>
     <input type="submit" name="Envoyer" value="Envoyer" /> 
 </form>
+
+
 <?php $content = ob_get_clean(); ?>
 <?php require('C:/wamp64/www/AppliStage/view/template.php'); ?>
+
