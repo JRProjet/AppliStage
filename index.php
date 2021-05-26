@@ -5,20 +5,16 @@ if (isset($_GET["action"])) {
         case "listeStage":
             require("controller/visiteStageController.php");
             listStage();
-<<<<<<< HEAD
         break;
         case "ajoutmoyentransportTrait":
             require("controller/moyenTransportController.php");
-            ajoutMoyenTransport();
+            ajoutMoyenTransportTrait();
         break;
         case "ajoutmoyentransportform":
             require("controller/moyenTransportController.php");
             ajoutMoyenTransportForm();
         break;
-=======
-            break;
-        default;
->>>>>>> master
+        default:break;
     }
 } else {
     //page d'accueil

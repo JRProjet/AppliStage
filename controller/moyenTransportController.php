@@ -1,10 +1,14 @@
 <?php
-require_once('model/MoyenTransport.php');
+require_once('model/MoyenTransportModel.php');
 
 function ajoutMoyenTransportTrait(){
-    $unMoyenTransport = new MoyenTransport();
-    $nbEnreg = $unMoyenTransport->ajoutMoyenTransport();
-    require("view/moyenTransport/ajoutMoyenTransportMes.php");
+    $unMoyenTransport = new MoyenTransportModel();
+    if(isset ($_POST["transport"])){
+        $unMoyenTransport ->ajoutMoyenTransport($_POST);
+        header ("Location: https://AppliStage/index/...");
+
+    }
+    header ("Location: http://AppliStage/index.php?action=ajoutmoyentransportform");
 }
 
 function ajoutMoyenTransportForm(){
