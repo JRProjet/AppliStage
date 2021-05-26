@@ -7,9 +7,9 @@ if(isset($_GET["action"])){
             listStage();
         break;
 
-        case "listeConvsNonSignees":
+        case "consultConvsNonSignees":
             require("controller/stageController.php");
-            listeConvsNonSignees();
+            consultConvsNonSignees();
         break;
     }
 } else{
