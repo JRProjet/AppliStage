@@ -2,18 +2,18 @@
 <?php $title = "Période de stage"?>
 
 <?php ob_start() ?>
+<?php
+//<!-- code html de la page-->
 
-<!-- code html de la page-->
-<?php foreach($LesSections AS $uneSection){
     //traitement
     echo'<table>
     <tr>
         <th>Sections</th>
-    <tr>
-';  
-foreach($LesSections AS $uneSection){
+    <tr>'; 
+var_dump($lesSections);
+foreach($lesSections AS $uneSection){
 //traitement
-echo "<tr><td>$enreg->libelle</td></tr>"; 
+    echo "<tr><td>$uneSection->libelle</td></tr>"; 
 }
 echo '</table>';
 ?>
