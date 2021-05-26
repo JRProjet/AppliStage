@@ -2,7 +2,7 @@
 //class dont on a besoin (classe manager.php obligatoire)
 require_once("Manager.php");
 
-class ConsultEntrepriseTechnologieManager extends Manager{
+class EntrepriseManager extends Manager{
     //fonction sur la table entreprise uniquement (select, insert...)
     public function getlesEntreprisesTechnologie(){
         $db = $this->dbConnect();

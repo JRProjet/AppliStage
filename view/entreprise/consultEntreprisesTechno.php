@@ -2,10 +2,10 @@
 <?php $title = "Consultation des entreprises par technologie"?>
 
 <?php ob_start() ?>
-
+<h2>Consultation des entreprises par technologie</h2>
 <!-- code html de la page-->
-<?php foreach($lesConsultationsEntreprisesTechnologieManager AS $uneConsultationEntrepriseStage){
-    //traitement
+<?php foreach($lesEntreprisesTechnologie AS $uneEntreprise){
+    echo $uneEntreprise->nom ;
 }?>
 
 
