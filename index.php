@@ -1,10 +1,11 @@
 <?php
 
-if(isset($_GET["action"])){
-    switch($_GET["action"]){
+if (isset($_GET["action"])) {
+    switch ($_GET["action"]) {
         case "listeStage":
             require("controller/visiteStageController.php");
             listStage();
+<<<<<<< HEAD
         break;
         case "ajoutmoyentransportTrait":
             require("controller/moyenTransportController.php");
@@ -14,8 +15,12 @@ if(isset($_GET["action"])){
             require("controller/moyenTransportController.php");
             ajoutMoyenTransportForm();
         break;
+=======
+            break;
+        default;
+>>>>>>> master
     }
-} else{
+} else {
     //page d'accueil
     // 
 }
