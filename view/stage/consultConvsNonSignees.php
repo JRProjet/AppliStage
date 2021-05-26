@@ -13,16 +13,13 @@
         echo '<table>
         <tr>
             <th>
-                élèves
+                Elèves
             </th>
             <th>
-                entreprise
-            </th>
-            <th>
-                Signées Conventions
+                Entreprise
             </th>
         </tr>';
-            echo "<strong><tr><td>$convsNonSigneesManage->nom, $convsNonSigneesManage->prenom</td><td>$convsNonSigneesManage->entreprise_nom</td></tr>";
+            echo "<strong><tr><td>$convsNonSignees->id_etudiant</td><td>$convsNonSignees->id_entreprise</td></tr>";
     }
 }
 ?>
