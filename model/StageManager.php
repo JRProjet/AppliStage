@@ -10,7 +10,7 @@ class StageManager extends Manager{
     }
     public function getLesConvSignees(){
         $db = $this->dbConnect();
-        return $db->query("SELECT UE.nom AS nom, UE.prenom AS prenom, UP.nom AS nomProf, UP.prenom AS prenomProf, section.libelle AS nomSection, section.categorie AS categSection, section.annee AS anneeSection, contenu, entreprise.nom AS nomEntreprise, rue_lieu_stage, tuteur.nom AS nomTuteur, tuteur.prenom AS prenomTuteur, ville.code_postal AS codePostalEntreprise, ville.nom AS nomVilleEntreprise FROM stage
+        return $db->query("SELECT UCASE(UE.nom) AS nom, UE.prenom AS prenom, UCASE(UP.nom) AS nomProf, UP.prenom AS prenomProf, section.libelle AS nomSection, section.categorie AS categSection, section.annee AS anneeSection, contenu, entreprise.nom AS nomEntreprise, rue_lieu_stage, UCASE(tuteur.nom) AS nomTuteur, tuteur.prenom AS prenomTuteur, ville.code_postal AS codePostalEntreprise, ville.nom AS nomVilleEntreprise FROM stage
         JOIN etat ON etat.id = stage.id_etat 
         JOIN utilisateur UE ON UE.id = stage.id_etudiant
         JOIN utilisateur UP ON UP.id = stage.id_prof_resp_suivi
