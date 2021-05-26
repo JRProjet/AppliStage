@@ -1,6 +1,7 @@
 <?php
 
 require_once("controller/fonctionnaliteController.php");
+require_once("controller/profilController.php");
 
 if (isset($_GET["action"])) {
     switch ($_GET["action"]) {
@@ -19,6 +20,10 @@ if (isset($_GET["action"])) {
         case "consultFonctionnalite":
 
             ConsultFonctionnalite();
+            break;
+        case "consultProfil":
+
+            GetLesProfils();
             break;
         default:
     }
