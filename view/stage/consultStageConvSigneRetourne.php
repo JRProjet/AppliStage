@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="public/css/style.css">
 
 <?php ob_start() ?>
-<h1>Convention signées et retournées à l'entreprise</h1>
+<h1>Convention</h1>
     <p>Liste des conventions signées et retournées à l'entreprise</p>
     
 
