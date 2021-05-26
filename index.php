@@ -10,6 +10,12 @@ if (isset($_GET["action"])) {
             require("controller/entrepriseController.php");
             lesEntreprisesTechnologie();
         break;
+        case "consultEntrepriseForm":
+            require("controller/entrepriseController.php");
+            rechercheEntreprisesTechnologie();
+        break;
+            
+
     }
 } else {
     //page d'accueil
