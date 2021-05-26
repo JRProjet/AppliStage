@@ -2,7 +2,7 @@
 //class dont on a besoin (classe manager.php obligatoire)
 require_once("Manager.php");
 
-class Fonctionnalite extends Manager
+class FonctionnaliteManager extends Manager
 {
     //fonction sur la table fonctionnalite uniquement (select, insert...)
     public function AddFonctionnalite($nomFonction, $nomScript)

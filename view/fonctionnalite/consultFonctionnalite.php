@@ -11,6 +11,7 @@ require_once('model/FonctionnaliteManager.php');
             <tr>
                 <th scope="col">Nom de la fonction</th>
                 <th scope="col">Script de la fonction</th>
+                <th scope="col">Modifier</th>
             </tr>
             <?php
             foreach ($consultFonction as $enreg) {
@@ -18,6 +19,11 @@ require_once('model/FonctionnaliteManager.php');
                 echo "<tr>
                         <td>$enreg->libelle</td>
                         <td>$enreg->nom_script</td>
+                        <td>     
+                            <a href='index.php?action=modifFonctionnaliteForm&id=$enreg->id'>
+                                <input type='button' value='Modifier'>
+                            </a>
+                        </td> 
                     </tr>";
             } ?>
         </table>

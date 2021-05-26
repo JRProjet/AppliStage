@@ -3,7 +3,7 @@ require_once('model/ProfilManager.php');
 
 function GetLesProfils()
 {
-    $GetProfil = new Profil();
+    $GetProfil = new ProfilManager();
     $GetProfil = $GetProfil->GetProfil();
     require("view/profil/consultProfil.php");
 }
@@ -13,7 +13,7 @@ function AddProfilForm()
 }
 function AddProfilTrait()
 {
-    $ajoutProfil = new Profil();
+    $ajoutProfil = new ProfilManager();
     $ajoutProfil = $ajoutProfil->AddProfil($_POST['libelle']);
     require("view/profil/ajoutProfilView.php");
 }

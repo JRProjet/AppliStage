@@ -18,7 +18,11 @@ require_once('model/ProfilManager.php');
 
                 echo "<tr>
                         <td>$enreg->libelle</td>
-                        
+                        <td>     
+                            <a href='/page/tour_modif.php'>
+                                <input type='button' value='Modifier'>
+                            </a>
+                        </td> 
                     </tr>";
             } ?>
         </table>
