@@ -3,7 +3,7 @@ abstract class Manager
 {
 	protected function dbConnect()
 	{	
-		//configDatabaseDev
+		try{//configDatabaseDev
 		require_once $_SERVER["DOCUMENT_ROOT"] . '/config/database.php';
 		$dsn = "mysql:host=" . $configDatabaseDev['host'] . ";port=" . $configDatabaseDev['port'] . ";dbname=" . $configDatabaseDev['dbname'] . ";charset=" . $configDatabaseDev['charset'];
 		$db = new PDO($dsn, $configDatabaseDev['user'], $configDatabaseDev['pwd']);

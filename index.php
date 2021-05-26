@@ -8,7 +8,7 @@ if (isset($_GET["action"])) {
         break;
         case "consultEntreprise":
             require("controller/entrepriseController.php");
-            consultEntreprise();
+            lesEntreprisesTechnologie();
         break;
     }
 } else {

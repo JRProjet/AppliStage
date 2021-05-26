@@ -1,5 +1,5 @@
 <?php
-require_once('/model/EntrepriseManager.php');
+require_once('model/EntrepriseManager.php');
 
 function lesEntreprisesTechnologie(){
     $entrepriseTechnologieManager = new EntrepriseManager();
