@@ -4,8 +4,8 @@ require_once("Manager.php");
 
 class transportModel extends Manager{
     //fonction sur la table viste stage uniquement (select, insert...)
-    public function ProfesseurExist($idProfesseur){
+    public function TransportExist($idTransport){
         $db = $this->dbConnect();
-        return $db->query("SELECT 1 FROM professeur WHERE id = $idProfesseur")->rowCount() == 1;
+        return $db->query("SELECT 1 FROM transport WHERE id = $idTransport")->rowCount() == 1;
     }
 }

@@ -1,8 +1,8 @@
 <?php
-require_once('model/visiteStageModel.php');
-require_once('model/etudiantModel.php');
-require_once('model/professeurModel.php');
-require_once('model/transportModel.php');
+require_once('model/VisiteStageModel.php');
+require_once('model/EtudiantModel.php');
+require_once('model/ProfesseurModel.php');
+require_once('model/TransportModel.php');
 
 function listeStage($idProfesseur){
     setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
@@ -43,6 +43,8 @@ function formulaireAjoutTraitement($idProfesseur){
         if($etudiantModel->EtudiantExist($temp) == false){
             $messageErreur .= "<br>L'étudiant est introuvable";
         }
+    } else{
+        $messageErreur .= "<br>L'étudiant doit être saisie";
     }
     
     //professeur
@@ -50,8 +52,10 @@ function formulaireAjoutTraitement($idProfesseur){
     if($temp != null){
         $professeurModel = new professeurModel();
         if($professeurModel->ProfesseurExist($temp) == false){
-            $messageErreur .= "<br>L'étudiant est introuvable";
+            $messageErreur .= "<br>Le professeur est introuvable";
         }
+    } else{
+        $messageErreur .= "<br>Le professeur doit être saisie";
     }
 
     //transport
@@ -59,7 +63,7 @@ function formulaireAjoutTraitement($idProfesseur){
     if($temp != null){
         $transportModel = new transportModel();
         if($transportModel->TransportExist($temp) == false){
-            $messageErreur .= "<br>L'étudiant est introuvable";
+            $messageErreur .= "<br>Le transport est introuvable";
         }
     }
 
