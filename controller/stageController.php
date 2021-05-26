@@ -6,8 +6,8 @@ function listeStage(){
     $Stages = $stageManage->getStage();
     require("view/Stage/listeStage.php");
 }
-function listeConvSigneesRetournees(){
-    $stageManage = new StageManager();
-    $lesStages = $stageManage->getLesConvRetournees();
-    require("view/Stage/listeConvSigneesRetournees.php");
+function consultStageConvSigneRetourne(){
+    $stageManager = new StageManager();
+    $lesStages = $stageManager->getLesStagesConvSigneRetourne();
+    require("view/stage/consultStageConvSigneRetourne.php");
 }
