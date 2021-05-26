@@ -11,10 +11,17 @@
         <th>Entreprise</th></tr> 
     </table>
 <!-- code html de la page-->
-<?php foreach($lesStages AS $uneConventionSigneRetourne){
+
+<?php 
+    var_dump ($lesStages);
+    foreach($lesStages AS $unStage){
+    echo "<tr><td>$unStage->nom $unStage->prenom</td></tr>";  
     //traitement
-    echo "<tr><td>$uneConventionSigneRetourne->nom $uneConventionSigneRetourne->prenom</td></tr>";                 
-    }
+}?>
+    //foreach ($lesStages as $iuneConv) {
+        //traitement
+        // echo "<tr><td>$uneConventionSigneRetourne->nom $uneConventionSigneRetourne->prenom</td></tr>";                 
+    //}
 ?>
 
 <!-- affichage de la page -->
