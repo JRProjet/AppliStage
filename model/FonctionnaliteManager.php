@@ -5,7 +5,7 @@ require_once("Manager.php");
 class Fonctionnalite extends Manager
 {
     //fonction sur la table fonctionnalite uniquement (select, insert...)
-    public function ajoutFonctionnalite($nomFonction, $nomScript)
+    public function AddFonctionnalite($nomFonction, $nomScript)
     {
         $db = $this->dbConnect();
 
@@ -38,7 +38,7 @@ class Fonctionnalite extends Manager
                             <br>Erreur :" . $e->getMessage());
         }
     }
-    public function consultFonctionnalite()
+    public function GetLesFonctionnalite()
     {
         $db = $this->dbConnect();
         $consultFonction = $db->query("select id, libelle, nom_script from fonctionnalite;");

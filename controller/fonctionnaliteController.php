@@ -4,7 +4,7 @@ require_once('model/FonctionnaliteManager.php');
 function AjoutFonctionnaliteTrait()
 {
     $ajoutFonction = new Fonctionnalite();
-    $ajoutFonction = $ajoutFonction->ajoutFonctionnalite($_POST['nomFonction'], $_POST['nomScript']);
+    $ajoutFonction = $ajoutFonction->AddFonctionnalite($_POST['nomFonction'], $_POST['nomScript']);
     require("view/fonctionnalite/ajoutFonctionnalite.php");
 }
 function AjoutFonctionnaliteForm()
@@ -14,6 +14,6 @@ function AjoutFonctionnaliteForm()
 function ConsultFonctionnalite()
 {
     $consultFonction = new Fonctionnalite();
-    $consultFonction = $consultFonction->consultFonctionnalite();
+    $consultFonction = $consultFonction->GetLesFonctionnalite();
     require("view/fonctionnalite/consultFonctionnalite.php");
 }
