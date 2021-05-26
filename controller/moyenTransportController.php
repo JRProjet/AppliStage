@@ -5,7 +5,7 @@ function ajoutMoyenTransportTrait(){
     $unMoyenTransport = new MoyenTransportModel();
     if(isset ($_POST["transport"])){
         $retour = $unMoyenTransport ->ajoutMoyenTransport($_POST);
-        if ($retour -> rowCount() == ) {
+        if ($retour -> rowCount() == 1) {
         $message = 'Moyen de transport ajouté';
         $lib = '';
         } else {
@@ -15,7 +15,6 @@ function ajoutMoyenTransportTrait(){
         require("view/moyenTransport/ajoutMoyenTransportForm.php");
 
     }
-    //header ("Location: http://AppliStage/index.php?action=ajoutmoyentransportform");
 }
 
 function ajoutMoyenTransportForm(){
