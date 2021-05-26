@@ -6,6 +6,6 @@ class SectionStageManager extends Manager{
     //fonction sur la table section uniquement (select, insert...)
     public function getLesSections(){
         $db = $this->dbConnect();
-        return $db->query("SELECT libelle FROM section");
+        return $db->query("SELECT DISTINCT libelle FROM section");
     }
 }

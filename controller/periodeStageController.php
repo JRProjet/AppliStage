@@ -1,8 +1,8 @@
 <?php
-require_once('model/SectionManager.php');
+require_once('model/PeriodeStageManager.php');
 
 function listesSections(){
     $sectionManage = new SectionStageManager();
     $lesSections = $sectionManage->getLesSections();
-    require("view/sectionStage/listeSectionStage.php");
+    require("view/listePeriodeStage/listeSectionStage.php");
 }
