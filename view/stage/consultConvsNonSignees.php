@@ -19,7 +19,7 @@
                 Entreprise
             </th>
         </tr>';
-            echo "<strong><tr><td>$convsNonSignees->id_etudiant</td><td>$convsNonSignees->id_entreprise</td></tr>";
+            echo "<strong><tr><td>$convsNonSignees->nom</td><td>$convsNonSignees->prenom</td></tr>";
     }
 }
 ?>
