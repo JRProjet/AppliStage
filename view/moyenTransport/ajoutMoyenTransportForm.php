@@ -5,10 +5,11 @@
 
 <!-- code html de la page-->
 
-<form action='http://applistage2/index.php?action=ajoutmoyentransportTrait' method='post'>
-<p>Le nouveau moyen de trasport : <input name='transport' type = 'text'required></p>
+<form action='index.php?action=ajoutmoyentransportTrait' method='post'>
+<p>Le nouveau moyen de transport : <input name='transport' type = 'text' required value = '<?php echo $lib; ?>'></p>
 <input type ='submit' name='valider' id='valider' value='Envoyer'/>
 </form>
+<?php echo $message;?>
 
 
 
