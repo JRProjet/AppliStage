@@ -1,5 +1,5 @@
 <?php
-
+require_once("controller/fonctionnaliteController.php");
 if (isset($_GET["action"])) {
     switch ($_GET["action"]) {
         case "listeStage":
@@ -7,7 +7,7 @@ if (isset($_GET["action"])) {
             listStage();
             break;
         case "ajoutFonctionnaliteForm":
-            require("controller/fonctionnaliteController.php");
+
             AjoutFonctionnaliteForm();
             break;
         case "ajoutFonctionnaliteTrait":
@@ -15,7 +15,7 @@ if (isset($_GET["action"])) {
             AjoutFonctionnaliteTrait($_POST['nomFonction'], $_POST['nomScript']);
             break;
         case "consultFonctionnalite":
-            require("controller/fonctionnaliteController.php");
+
             ConsultFonctionnalite();
             break;
         default:
