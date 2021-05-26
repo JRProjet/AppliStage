@@ -17,4 +17,35 @@ class Profil extends Manager
             return $consultProfil;
         }
     }
+    public function AddProfil($libelle)
+    {
+        $db = $this->dbConnect();
+
+        $msg = "";
+        if (isset($libelle) == false || trim($libelle) == "") {
+            echo  "Le nom du profil est obligatoire </br>";
+        } else {
+            try {
+
+                $req = $db->prepare("insert into profil values (0, :par_libelle);");
+
+
+                $req->bindValue(':par_libelle', $libelle, PDO::PARAM_STR);
+
+                $req->execute();
+
+
+                if ($req->rowCount() == 0) {
+                    echo "Erreur grave : le profil n’a pas été enregistré.";
+                } else {
+                    echo '<script language=javascript>
+                                        alert(\' Félicitations ! : Le profil a été enregistrée\');
+                                    </script> ';
+                }
+            } catch (PDOException $e) {
+                die("BDIns01: erreur lors de l’ajout dans la table fonctionnalite – script ajout_fonctionnalite.php
+                                <br>Erreur :" . $e->getMessage());
+            }
+        }
+    }
 }

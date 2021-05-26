@@ -25,6 +25,15 @@ if (isset($_GET["action"])) {
 
             GetLesProfils();
             break;
+        case "ajoutProfilForm":
+
+            AddProfilForm();
+            break;
+        case "ajoutProfilTrait":
+
+            AddProfilTrait($_POST['libelle']);
+
+            break;
         default:
     }
 } else {
