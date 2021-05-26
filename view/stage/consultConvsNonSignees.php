@@ -13,13 +13,21 @@
         echo '<table>
         <tr>
             <th>
-                Elèves
+                Nom
+            </th>
+            <th>
+                Prénom
             </th>
             <th>
                 Entreprise
             </th>
+            <th>
+                Etat
+            </th>
         </tr>';
-            echo "<strong><tr><td>$convsNonSignees->nom</td><td>$convsNonSignees->prenom</td></tr>";
+            echo "<strong><tr><prenom>$convsNonSignees->nom $convsNonSignees->prenom</td>
+            <td>$convsNonSignees->nomEntreprise</td>
+            <td>$convsNonSignees->libelleEtat</td></tr>";
     }
 }
 ?>
