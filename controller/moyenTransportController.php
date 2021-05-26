@@ -5,7 +5,7 @@ function ajoutMoyenTransportTrait(){
     $unMoyenTransport = new MoyenTransportModel();
     if(isset ($_POST["transport"])){
         $retour = $unMoyenTransport ->ajoutMoyenTransport($_POST);
-        if ($retour -> rowCount() == 1) {
+        if ($retour -> rowCount() == ) {
         $message = 'Moyen de transport ajouté';
         $lib = '';
         } else {
