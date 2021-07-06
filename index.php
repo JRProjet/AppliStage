@@ -1,25 +1,41 @@
 <?php
 
-if (isset($_GET["action"])) {
-    switch ($_GET["action"]) {
-        case "listeStage":
-            require("controller/visiteStageController.php");
-            listStage();
+if (isset($_GET['action'])) {
+    switch ($_GET['action']) {
+        case "verifUtilisateurTrait":
+            // le formulaire de connexion a été soumis. Vérification des informations saisies
+            require("controller/utilisateurController.php");
+            connexionTrait($_POST);
             break;
-        case "ajoutFonctionnaliteForm":
-            require("controller/fonctionnaliteController.php");
-            AjoutFonctionnaliteForm();
+        case "accueil":
+            // choix de l'option accueil dans le menu 
+            require_once("controller/utilisateurController.php");
+            connexionForm();
             break;
-        case "ajoutFonctionnaliteTrait":
-
-            AjoutFonctionnaliteTrait($_POST['nomFonction'], $_POST['nomScript']);
+        case "ajoutDemRembForm":
+            // demande du formulaire de saisie d'une demande de remboursement
+            require("controller/demandeRemboursementController.php");
+            ajoutDemandeRemboursementForm();
             break;
-        case "consultFonctionnalite":
-            require("controller/fonctionnaliteController.php");
-            ConsultFonctionnalite();
+        case "ajoutDemRembTrait":
+            // le formulaire de saisie d'une demande de remboursement a été soumis.
+            // Vérification et traitement des informations saisies
+            require("controller/demandeRemboursementController.php");
+            ajoutDemandeRemboursementTrait();
+            break;
+        case "consultRembourDelegue":
+            // affichage des demandes de remboursements saisies par le délegué
+            require("controller/demandeRemboursementController.php");
+            consultDemandeRemboursementDelegue();
             break;
         default:
+            // action contient une valeur non connue : on affiche le formulaire de connexion
+            require_once("controller/utilisateurController.php");
+            connexionForm();
+            break;
     }
 } else {
-    //sdkjdksjd
+    // action n'est pas fourni : on affiche le formulaire de connexion
+    require_once("controller/utilisateurController.php");
+    connexionForm();
 }
